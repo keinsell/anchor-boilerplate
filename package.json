@@ -1,7 +1,7 @@
 {
   "name": "@scope/spl-contract-name",
   "dependencies": {
-    "@project-serum/anchor": "^0.25.0"
+    "@project-serum/anchor": "0.25.0"
   },
   "type": "module",
   "scripts": {
