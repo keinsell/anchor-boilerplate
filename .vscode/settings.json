@@ -1,0 +1,11 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "rust-analyzer.linkedProjects": ["package/Cargo.toml"],
+  "rust-analyzer.procMacro.enable": false,
+  "[rust]": {
+    "editor.defaultFormatter": "dprint.dprint",
+    "editor.formatOnSave": true
+  },
+  "cSpell.words": ["chainized", "Keypair", "keypairs"]
+}

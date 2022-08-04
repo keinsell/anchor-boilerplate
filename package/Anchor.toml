@@ -1,0 +1,12 @@
+[features]
+seeds = false
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "devnet"
+wallet = "./config/id.json"
+
+[scripts]
+test = "./node_modules/ava/entrypoints/cli.mjs --timeout=10m"
