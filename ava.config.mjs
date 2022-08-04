@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   concurrency: 5,
   failFast: true,
   failWithoutAssertions: false,
@@ -11,5 +11,7 @@ module.exports = {
     "--experimental-specifier-resolution=node",
     "--no-warnings",
   ],
-  extensions: ["ts"],
+  extensions: {
+    ts: "module",
+  },
 };

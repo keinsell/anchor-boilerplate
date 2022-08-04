@@ -1,8 +1,8 @@
-import anchor from "@project-serum/anchor";
+import * as anchor from "@project-serum/anchor";
 import test from "ava";
 import ava, { ExecutionContext } from "ava";
 
-const provider = anchor.Provider.env();
+const provider = anchor.AnchorProvider.env();
 anchor.setProvider(provider);
 
 const program = anchor.workspace.Boilerplate;

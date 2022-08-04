@@ -4,17 +4,25 @@
     "@project-serum/anchor": "^0.25.0"
   },
   "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "anchor test",
     "lint": "echo \"Error: no lint specified\" && exit 1",
-    "build": "anchor build",
-    "deploy": "echo \"Error: no lint specified\" && exit 1",
+    "dev": "tsup --watch",
+    "build:src": "anchor build",
+    "build:lib": "tsup",
+    "build": "pnpm run build:src && pnpm run build:lib",
+    "deploy": "anchor deploy",
     "solana:wallet": "node --loader tsx ./scripts/setupConfigAndWallet.ts"
   },
   "devDependencies": {
     "@ava/typescript": "3.0.1",
     "@project-serum/anchor": "0.25.0",
-    "@project-serum/anchor-cli": "0.25.0",
     "@solana/spl-token": "0.2.0",
     "@solana/web3.js": "1.47.3",
     "@types/chai": "4.3.1",

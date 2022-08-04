@@ -4,6 +4,9 @@ seeds = false
 [registry]
 url = "https://anchor.projectserum.com"
 
+[program.devnet]
+boilerplate = "81zdKR7F44enFpsqygUKuTbaF4mvGrJe798k1fAB1qog"
+
 [provider]
 cluster = "devnet"
 wallet = "./config/id.json"

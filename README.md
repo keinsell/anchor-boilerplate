@@ -6,11 +6,13 @@ There are serval problems with solana programs such as weird configuration where
 
 Whole process should be managed by `config` directory.
 
+### Guide
+
+> Use of `.devcontainer` is recommended since it have all of the tools for solana.
+
 ```
-$ cp package <desired_location>
-$ cd <desired_location>
 $ pnpm install
-$ pnpm run solana:setup
+$ pnpm run solana:wallet
 $ pnpm run build
 $ pnpm run test
 $ pnpm run deploy
