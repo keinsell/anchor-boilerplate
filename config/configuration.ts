@@ -2,9 +2,20 @@
 type ConfigurationObject = {
   /** Network where contract should be deployed. */
   network: "localnet" | "devnet" | "testnet" | "mainnet";
-  features: {
-    seeds: boolean;
+  idLocation: string;
+  configLocation: string;
+  features?: {
+    seeds?: boolean;
   };
 };
 
-export default {};
+const defaultIdLocation = `${process.env["HOME"]}/.config/solana/id.json`;
+const defaultConfigLocation = `${process.env["HOME"]}/.config/solana/cli/config.yml`;
+
+const config: ConfigurationObject = {
+  network: "devnet",
+  idLocation: defaultIdLocation,
+  configLocation: defaultConfigLocation,
+};
+
+export default config;
