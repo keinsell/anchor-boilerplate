@@ -12,7 +12,7 @@ Whole process should be managed by `config` directory.
 
 ```
 $ pnpm install
-$ pnpm run solana:wallet
+$ pnpm run setup
 $ pnpm run build
 $ pnpm run test
 $ pnpm run deploy

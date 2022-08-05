@@ -18,7 +18,7 @@
     "build:lib": "tsup",
     "build": "pnpm run build:src && pnpm run build:lib",
     "deploy": "anchor deploy",
-    "solana:wallet": "node --loader tsx ./scripts/setupConfigAndWallet.ts"
+    "setup": "node --loader tsx ./scripts/setupConfigAndWallet.ts"
   },
   "devDependencies": {
     "@ava/typescript": "3.0.1",
