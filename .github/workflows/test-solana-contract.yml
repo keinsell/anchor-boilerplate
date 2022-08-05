@@ -39,7 +39,7 @@ jobs:
           run_install: true
 
       - name: Set default toolchain
-        run: rustup default stable
+        run: rustup default nightly
       - name: List rustup toolchains
         run: rustup toolchain list
       - name: Generate new keygen
