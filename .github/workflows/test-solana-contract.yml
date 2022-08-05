@@ -36,18 +36,23 @@ jobs:
       - uses: pnpm/action-setup@v2.2.2
         with:
           version: 7.3.0
-          run_install: true
+          run_install: false
 
-      - name: Set default toolchain
-        run: rustup default nightly
       - name: List rustup toolchains
         run: rustup toolchain list
+      - name: Set default toolchain
+        run: rustup default stable
+
       - name: Generate new keygen
         run: solana-keygen new
       - name: Set solana target cluster to local
         run: solana config set --url http:localhost:8899
       - name: Check solana config
         run: solana config get
+
+      - name: Install dependencies
+        run: pnpm install
+
       - name: Run build script
         run: pnpm run build
       - name: Run test script
