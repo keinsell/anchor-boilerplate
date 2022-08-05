@@ -44,9 +44,9 @@ jobs:
         run: rustup default stable
 
       - name: Generate new keygen
-        run: solana-keygen new
+        run: solana-keygen new -o ./config/id.json
       - name: Set solana target cluster to local
-        run: solana config set --url http:localhost:8899
+        run: solana config set --url http:localhost:8899 -o ./config/config.yaml
       - name: Check solana config
         run: solana config get
 
