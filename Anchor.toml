@@ -8,7 +8,7 @@ url = "https://anchor.projectserum.com"
 boilerplate = "81zdKR7F44enFpsqygUKuTbaF4mvGrJe798k1fAB1qog"
 
 [provider]
-cluster = "devnet"
+cluster = "localnet"
 wallet = "./config/id.json"
 
 [scripts]
