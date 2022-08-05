@@ -46,7 +46,7 @@ jobs:
       - name: Generate new keygen
         run: solana-keygen new -o ./config/id.json
       - name: Set solana target cluster to local
-        run: solana config set --url http:localhost:8899 -o ./config/config.yaml
+        run: solana config set --url http:localhost:8899
       - name: Check solana config
         run: solana config get
 
