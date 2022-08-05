@@ -6,6 +6,7 @@ on:
     paths:
       - programs/*
       - .github/workflows/test-solana-contract.yml
+
   pull_request:
     branches: [main]
     paths:
@@ -37,7 +38,6 @@ jobs:
           version: 7.3.0
           run_install: true
 
-        run: rustup toolchain list
       - name: Set default toolchain
         run: rustup default stable
       - name: List rustup toolchains
@@ -48,7 +48,7 @@ jobs:
         run: solana config set --url http:localhost:8899
       - name: Check solana config
         run: solana config get
-      - name: Build
+      - name: Run build script
         run: pnpm run build
-      - name: Run tests
+      - name: Run test script
         run: pnpm run test
